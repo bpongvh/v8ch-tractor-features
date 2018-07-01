@@ -5,8 +5,14 @@ import path from 'path';
 const webpackConfig = {
   context: path.join(process.cwd(), 'src'),
   entry: {
-    'v8ch-hero': ['./scripts/v8ch-hero.js'],
-    'v8ch-skills': ['./scripts/v8ch-skills.js'],
+    'tractor-blocks': ['./styles/tractor-blocks.scss'],
+    'block-v8ch-hero': ['./scripts/blocks/v8ch-hero.jsx'],
+    'block-v8ch-projects': ['./scripts/blocks/v8ch-projects.jsx'],
+    'block-v8ch-skills': ['./scripts/blocks/v8ch-skills.jsx'],
+  },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
   },
   module: {
     rules: [
@@ -32,8 +38,8 @@ const webpackConfig = {
   plugins: [
     new CleanPlugin(['dist']),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: 'styles/[name].css',
+      chunkFilename: 'styles/[id].css',
     }),
   ],
   resolve: { extensions: ['.js', '.jsx'] },
