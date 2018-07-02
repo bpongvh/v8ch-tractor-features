@@ -22,4 +22,9 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-require_once plugin_dir_path(__FILE__) . 'src/init.php';
+use V8CH\WordPress\TractorBlocks\Plugin;
+
+require_once 'vendor/autoload.php';
+
+$plugin = new Plugin();
+$plugin->run();
