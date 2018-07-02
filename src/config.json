@@ -1,19 +1,18 @@
 {
   "entry": {
-    "v8ch-hero": [
-      "./scripts/v8ch-hero.js",
-      "./styles/v8ch-hero.scss"
-    ],
-    "v8ch-skills": ["./scripts/v8ch-skills.js"]
+    "app-v8ch-hero": ["./scripts/app-v8ch-hero.jsx"],
+    "block-v8ch-hero": ["./scripts/blocks/v8ch-hero.jsx"],
+    "block-v8ch-projects": ["./scripts/blocks/v8ch-projects.jsx"],
+    "block-v8ch-skills": ["./scripts/blocks/v8ch-skills.jsx"],
+    "tractor-blocks": ["./styles/tractor-blocks.scss"]
   },
-  "publicPath": "/home/vagrant/v8ch_com/wp-content/plugins/v8ch-tractor-blocks",
   "devUrl": "http://v8ch_com.local",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "http://localhost:3001",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
-    "index.php",
     "dist/**/*.css",
     "dist/**/*.js",
-    "src/init.php"
+    "init.php",
+    "v8ch-tractor-blocks.php"
   ]
 }
