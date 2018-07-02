@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-unresolved
+import React from 'react';
 
 const ProjectsList = () => (
   <div className="frame frame--dark-background frame--padded type--v8ch">

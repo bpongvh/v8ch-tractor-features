@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-unresolved
+import React from 'react';
 
 const V8chLogo = () => (
   <svg

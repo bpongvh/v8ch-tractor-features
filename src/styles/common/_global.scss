@@ -1,92 +1,90 @@
 @import "variables";
 
-.editor-block-list__block-edit {
-  .frame {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
+.frame {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.featured-link {
+  p {
+    margin: 0;
   }
 
-  .featured-link {
-    p {
-      margin: 0;
-    }
+  h5 {
+    margin: 0;
+  }
+}
 
-    h5 {
-      margin: 0;
-    }
+.featured-link--margin-bottom {
+  margin: 0 0 1em;
+}
+
+.frame--light-background {
+  background-color: $color__v8ch-green;
+}
+
+.frame--dark-background {
+  background-color: $color__v8ch-dark-green;
+}
+
+.frame--hero {
+  height: 50vh;
+}
+
+.frame--padded {
+  padding: 2em 1em;
+}
+
+.frame__2col {
+  & .featured-link {
+    break-inside: avoid;
+  }
+}
+
+.frame__container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  &.frame__container--center {
+    align-items: center;
+    justify-content: center;
   }
 
-  .featured-link--margin-bottom {
-    margin: 0 0 1em;
+  &.frame__container--bottom {
+    align-items: flex-end;
   }
+}
 
-  .frame--light-background {
-    background-color: $color__v8ch-green;
-  }
+.frame__container--space-between {
+  justify-content: space-between;
+}
 
-  .frame--dark-background {
-    background-color: $color__v8ch-dark-green;
-  }
+.frame__container--margin-bottom {
+  margin: 0 0 2em 0;
+}
 
-  .frame--hero {
-    height: 50vh;
-  }
+.frame__container--vcenter {
+  align-content: center;
+}
 
-  .frame--padded {
-    padding: 2em 1em;
-  }
+.frame__form-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
 
-  .frame__2col {
-    & .featured-link {
-      break-inside: avoid;
-    }
-  }
-
-  .frame__container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-
-    &.frame__container--center {
-      align-items: center;
-      justify-content: center;
-    }
-
-    &.frame__container--bottom {
-      align-items: flex-end;
-    }
-  }
-
-  .frame__container--space-between {
-    justify-content: space-between;
-  }
-
-  .frame__container--margin-bottom {
-    margin: 0 0 2em 0;
-  }
-
-  .frame__container--vcenter {
-    align-content: center;
-  }
-
-  .frame__form-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-
-    & form {
-      width: 100%;
-    }
-  }
-
-  .split-header {
-    display: flex;
-    justify-content: space-between;
+  & form {
     width: 100%;
   }
+}
 
-  .split-header--light {
-    color: $color__v8ch-green !important;
-  }
+.split-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.split-header--light {
+  color: $color__v8ch-green !important;
 }

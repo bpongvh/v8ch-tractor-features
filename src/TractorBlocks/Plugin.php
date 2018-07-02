@@ -17,25 +17,25 @@ class Plugin
     public function registerAssets()
     {
         $assets = new RegisterAssets();
-        add_action('init', [$assets, 'register'], 100);
+        add_action('plugins_loaded', [$assets, 'register'], 100);
     }
 
     public function registerBlocks()
     {
         $blocks = new RegisterBlocks();
-        add_action('init', [$blocks, 'register'], 100);
+        add_action('plugins_loaded', [$blocks, 'register'], 100);
     }
 
-    public function enqueueApps()
+    public function registerApps()
     {
-        $apps = new EnqueueRenderApps();
-        add_action('wp_enqueue_scripts', [$apps, 'enqueue'], 100);
+        $apps = new RegisterRenderApps();
+        add_action('plugins_loaded', [$apps, 'enqueue'], 100);
     }
 
     public function run()
     {
         $this->registerAssets();
         $this->registerBlocks();
-        $this->enqueueApps();
+        $this->registerApps();
     }
 }

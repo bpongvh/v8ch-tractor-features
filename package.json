@@ -36,7 +36,6 @@
     "friendly-errors-webpack-plugin": "^1.7.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.7.2",
-    "normalize.css": "^8.0.0",
     "path": "^0.12.7",
     "postcss-loader": "^2.1.5",
     "prettier": "^1.13.7",

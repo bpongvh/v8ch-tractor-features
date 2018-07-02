@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-unresolved
+import React from 'react';
 import SkillsList from '../components/SkillsList';
 
 const { registerBlockType } = wp.blocks;
@@ -10,7 +10,7 @@ const editFn = () => (
   ]
 );
 
-const saveFn = () => (<SkillsList />);
+const saveFn = () => (<div id="v8ch-skills-mount" />);
 
 /**
  * Register the block

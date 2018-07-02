@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-unresolved
+import React from 'react';
 import LandingHero from '../components/LandingHero';
 
 const { registerBlockType } = wp.blocks;
@@ -10,7 +10,7 @@ const editFn = () => (
   ]
 );
 
-const saveFn = () => (<LandingHero />);
+const saveFn = () => (<div id="v8ch-hero-mount" />);
 
 /**
  * Register the block

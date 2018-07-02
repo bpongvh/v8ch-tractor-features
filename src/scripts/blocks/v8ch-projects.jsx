@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line import/no-unresolved
+import React from 'react';
 import ProjectsList from '../components/ProjectsList';
 
 const { registerBlockType } = wp.blocks;
@@ -10,7 +10,7 @@ const editFn = () => (
   ]
 );
 
-const saveFn = () => (<ProjectsList />);
+const saveFn = () => (<div id="v8ch-projects-mount" />);
 
 /**
  * Register the block
