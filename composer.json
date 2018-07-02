@@ -1,4 +1,11 @@
 {
+	"autoload": {
+		"psr-4": {
+			"V8CH\\WordPress\\TractorBlocks\\": [
+				"src/TractorBlocks"
+			]
+		}
+	},
 	"description": "Custom Gutenberg blocks to complement the V8CH Tractor theme.",
 	"homepage": "https://github.com/V8CH/v8ch-tractor-blocks",
 	"keywords": [
