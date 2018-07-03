@@ -19,24 +19,24 @@ class RegisterBlocks
     {
         register_block_type(
             'v8ch/v8ch-hero',
-            array(
-            'editor_script' => 'v8ch/block-v8ch-hero',
-            'editor_style'  => 'v8ch/tractor-blocks'
-            )
+            [
+                'editor_script'   => 'v8ch/block-v8ch-hero',
+                'editor_style'    => 'v8ch/tractor-blocks',
+            ]
         );
         register_block_type(
             'v8ch/v8ch-projects',
-            array(
-            'editor_script' => 'v8ch/block-v8ch-projects',
-            'editor_style'  => 'v8ch/tractor-blocks'
-            )
+            [
+                'editor_script'   => 'v8ch/block-v8ch-projects',
+                'editor_style'    => 'v8ch/tractor-blocks',
+            ]
         );
         register_block_type(
             'v8ch/v8ch-skills',
-            array(
-            'editor_script' => 'v8ch/block-v8ch-skills',
-            'editor_style'  => 'v8ch/tractor-blocks'
-            )
+            [
+                'editor_script'   => 'v8ch/block-v8ch-skills',
+                'editor_style'    => 'v8ch/tractor-blocks',
+            ]
         );
     }
 }
