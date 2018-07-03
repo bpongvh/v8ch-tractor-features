@@ -7,6 +7,10 @@
 .dual-header--inset {
   @media (min-width: 768px) {
     padding: 0 12.5%;
+
+    .editor-block-list__layout & {
+      padding: 0;
+    }
   }
 }
 
@@ -17,6 +21,10 @@
 
   @media (min-width: 768px) {
     padding: 2em;
+
+    .editor-block-list__layout & {
+      padding: 1em;
+    }
   }
 }
 
@@ -63,10 +71,18 @@
 
   @media (min-width: 768px) {
     padding: 4em 2em;
+
+    .editor-block-list__layout & {
+      padding: 2em 1em;
+    }
   }
 
   @media (min-width: 1200px) {
     padding: 6em 2em;
+
+    .editor-block-list__layout & {
+      padding: 4em 2em;
+    }
   }
 }
 
@@ -75,6 +91,20 @@
     columns: 2;
     column-gap: 2em;
     padding: 0 12.5%;
+
+    .editor-block-list__layout & {
+      columns: 1;
+      column-gap: 0;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .editor-block-list__layout & {
+      columns: 2;
+      column-gap: 2em;
+      padding: 0 12.5%;
+    }
   }
 
   & .featured-link {
@@ -116,6 +146,16 @@
 
   @media (min-width: 768px) {
     padding: 0 25% 2em;
+
+    .editor-block-list__layout & {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .editor-block-list__layout & {
+      padding: 0 25% 2em;
+    }
   }
 }
 
