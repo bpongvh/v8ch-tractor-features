@@ -33,7 +33,7 @@ let configBuilder = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          config.enabled.styleLoader ? 'style-loader' : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
