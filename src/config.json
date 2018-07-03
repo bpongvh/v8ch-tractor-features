@@ -1,6 +1,8 @@
 {
   "entry": {
     "app-v8ch-hero": ["./scripts/app-v8ch-hero.jsx"],
+    "app-v8ch-projects": ["./scripts/app-v8ch-projects.jsx"],
+    "app-v8ch-skills": ["./scripts/app-v8ch-skills.jsx"],
     "block-v8ch-hero": ["./scripts/blocks/v8ch-hero.jsx"],
     "block-v8ch-projects": ["./scripts/blocks/v8ch-projects.jsx"],
     "block-v8ch-skills": ["./scripts/blocks/v8ch-skills.jsx"],
