@@ -1,0 +1,170 @@
+@import "variables";
+
+.dual-header {
+  width: 100%;
+}
+
+.dual-header--inset {
+  @media (min-width: 768px) {
+    padding: 0 12.5%;
+
+    .editor-block-list__layout & {
+      padding: 0;
+    }
+  }
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  @media (min-width: 768px) {
+    padding: 2em;
+
+    .editor-block-list__layout & {
+      padding: 1em;
+    }
+  }
+}
+
+.featured-link {
+  p {
+    margin: 0;
+  }
+
+  h5 {
+    margin: 0;
+  }
+}
+
+.featured-link--margin-bottom {
+  margin: 0 0 1em;
+}
+
+.frame--light-background {
+  background-color: $color__v8ch-green;
+}
+
+.frame--dark-background {
+  background-color: $color__v8ch-dark-green;
+}
+
+.frame--hero {
+  height: 100vw;
+
+  .editor-block-list__layout & {
+    height: 50vh;
+  }
+
+  @media (orientation: landscape) {
+    height: calc(100vh - 2em);
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
+    height: calc(100vh - 4em);
+  }
+}
+
+.frame--padded {
+  padding: 2em 1em;
+
+  @media (min-width: 768px) {
+    padding: 4em 2em;
+
+    .editor-block-list__layout & {
+      padding: 2em 1em;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 6em 2em;
+
+    .editor-block-list__layout & {
+      padding: 4em 2em;
+    }
+  }
+}
+
+.frame__2col {
+  @media (min-width: 768px) {
+    columns: 2;
+    column-gap: 2em;
+    padding: 0 12.5%;
+
+    .editor-block-list__layout & {
+      columns: 1;
+      column-gap: 0;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .editor-block-list__layout & {
+      columns: 2;
+      column-gap: 2em;
+      padding: 0 12.5%;
+    }
+  }
+
+  & .featured-link {
+    break-inside: avoid;
+  }
+}
+
+.frame__container {
+  @extend %flex-container-base;
+
+  &.frame__container--center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.frame__container--bottom {
+    align-items: flex-end;
+  }
+}
+
+.frame__container--space-between {
+  justify-content: space-between;
+}
+
+.frame__container--margin-bottom {
+  margin: 0 0 2em 0;
+}
+
+.frame__container--vcenter {
+  align-content: center;
+}
+
+.frame__form-container {
+  @extend %flex-container-base;
+
+  & form {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 25% 2em;
+
+    .editor-block-list__layout & {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .editor-block-list__layout & {
+      padding: 0 25% 2em;
+    }
+  }
+}
+
+.split-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.split-header--light {
+  color: $color__v8ch-green !important;
+}
