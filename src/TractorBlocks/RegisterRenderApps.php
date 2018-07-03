@@ -28,7 +28,7 @@ class RegisterRenderApps
         wp_register_style(
             'v8ch-tractor-blocks',
             plugins_url('/dist/styles/tractor-blocks.css', dirname(__FILE__, 2)),
-            array( 'wp-blocks', 'wp-element')
+            ['wp-blocks', 'wp-element']
         );
     }
 
@@ -46,8 +46,8 @@ class RegisterRenderApps
     public function registerV8chProjectsApp()
     {
         wp_register_script(
-            'v8ch_skills_app',
-            plugins_url('/dist/scripts/app-v8ch-skills.js', dirname(__FILE__, 2)),
+            'v8ch_projects_app',
+            plugins_url('/dist/scripts/app-v8ch-projects.js', dirname(__FILE__, 2)),
             ['wp-element'],
             false,
             true
@@ -57,8 +57,8 @@ class RegisterRenderApps
     public function registerV8chSkillsApp()
     {
         wp_register_script(
-            'v8ch_projects_app',
-            plugins_url('/dist/scripts/app-v8ch-projects.js', dirname(__FILE__, 2)),
+            'v8ch_skills_app',
+            plugins_url('/dist/scripts/app-v8ch-skills.js', dirname(__FILE__, 2)),
             ['wp-element'],
             false,
             true
