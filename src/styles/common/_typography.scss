@@ -1,3 +1,4 @@
+@import "placeholders";
 @import "variables";
 
 .dual-header,
@@ -11,21 +12,15 @@
   }
 
   h3 {
-    font-size: 2em;
-    font-weight: 600;
-    text-transform: uppercase;
+    @extend %two-em-medium-upper;
   }
 
   h4 {
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: lowercase;
+    @extend %one-em-medium-lower;
   }
 
   h5 {
-    font-size: 1em;
-    font-weight: 300;
-    text-transform: lowercase;
+    @extend %one-em-thin-lower;
   }
 }
 
@@ -52,15 +47,11 @@
 
 .featured-link {
   a {
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: lowercase;
+    @extend %one-em-medium-lower;
   }
 
   & p {
-    font-size: 1em;
-    font-weight: 300;
-    text-transform: lowercase;
+    @extend %one-em-thin-lower;
   }
 
   &.featured-link--light {
@@ -71,9 +62,7 @@
   }
 
   & h5 {
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: lowercase;
+    @extend %one-em-medium-lower;
   }
 }
 

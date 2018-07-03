@@ -1,9 +1,23 @@
 @import "variables";
 
+.dual-header {
+  width: 100%;
+}
+
+.dual-header--inset {
+  @media (min-width: 768px) {
+    padding: 0 12.5%;
+  }
+}
+
 .frame {
   display: flex;
   flex-direction: column;
   padding: 1em;
+
+  @media (min-width: 768px) {
+    padding: 2em;
+  }
 }
 
 .featured-link {
@@ -29,23 +43,47 @@
 }
 
 .frame--hero {
-  height: 50vh;
+  height: 100vw;
+
+  .editor-block-list__layout & {
+    height: 50vh;
+  }
+
+  @media (orientation: landscape) {
+    height: calc(100vh - 2em);
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
+    height: calc(100vh - 4em);
+  }
 }
 
 .frame--padded {
   padding: 2em 1em;
+
+  @media (min-width: 768px) {
+    padding: 4em 2em;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 6em 2em;
+  }
 }
 
 .frame__2col {
+  @media (min-width: 768px) {
+    columns: 2;
+    column-gap: 2em;
+    padding: 0 12.5%;
+  }
+
   & .featured-link {
     break-inside: avoid;
   }
 }
 
 .frame__container {
-  display: flex;
-  height: 100%;
-  width: 100%;
+  @extend %flex-container-base;
 
   &.frame__container--center {
     align-items: center;
@@ -70,12 +108,14 @@
 }
 
 .frame__form-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
+  @extend %flex-container-base;
 
   & form {
     width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 25% 2em;
   }
 }
 

@@ -2,8 +2,22 @@
 @import "common/typography";
 @import "common/variables";
 
-.editor-block-list__layout {
-  & svg {
+svg {
+  &#v8ch-logo {
+    height: 150px;
+    width: 150px;
+
+    @media (min-width: 768px) {
+      height: 350px;
+      width: 350px;
+    }
+  }
+
+  & .fill-color--v8ch-logo {
+    fill: #dcedc8;
+  }
+
+  .editor-block-list__layout & {
     &#v8ch-logo {
       height: 125px;
       width: 125px;
@@ -12,10 +26,6 @@
         height: 200px;
         width: 200px;
       }
-    }
-
-    & .fill-color--v8ch-logo {
-      fill: #dcedc8;
     }
   }
 }
