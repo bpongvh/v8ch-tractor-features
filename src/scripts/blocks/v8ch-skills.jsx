@@ -10,7 +10,7 @@ const editFn = () => (
   ]
 );
 
-const saveFn = () => (<div id="v8ch-skills-mount" />);
+const saveFn = () => null;
 
 /**
  * Register the block

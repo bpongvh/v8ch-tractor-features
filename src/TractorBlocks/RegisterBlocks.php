@@ -21,22 +21,40 @@ class RegisterBlocks
             'v8ch/v8ch-hero',
             [
                 'editor_script'   => 'v8ch/block-v8ch-hero',
-                'editor_style'    => 'v8ch/tractor-blocks',
+                'editor_style'    => 'v8ch-tractor-blocks',
+                'render_callback'    => [$this, 'renderV8chHero'],
             ]
         );
         register_block_type(
             'v8ch/v8ch-projects',
             [
                 'editor_script'   => 'v8ch/block-v8ch-projects',
-                'editor_style'    => 'v8ch/tractor-blocks',
+                'editor_style'    => 'v8ch-tractor-blocks',
+                'render_callback'    => [$this, 'renderV8chProjects'],
             ]
         );
         register_block_type(
             'v8ch/v8ch-skills',
             [
                 'editor_script'   => 'v8ch/block-v8ch-skills',
-                'editor_style'    => 'v8ch/tractor-blocks',
+                'editor_style'    => 'v8ch-tractor-blocks',
+                'render_callback'    => [$this, 'renderV8chSkills'],
             ]
         );
+    }
+
+    public function renderV8chHero()
+    {
+        return '<div id="v8ch-hero-mount"></div>';
+    }
+
+    public function renderV8chProjects()
+    {
+        return '<div id="v8ch-projects-mount"></div>';
+    }
+
+    public function renderV8chSkills()
+    {
+        return '<div id="v8ch-skills-mount"></div>';
     }
 }
