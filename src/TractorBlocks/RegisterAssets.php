@@ -20,22 +20,22 @@ class RegisterAssets
         wp_register_script(
             'v8ch/block-v8ch-hero',
             plugins_url('/dist/scripts/block-v8ch-hero.js', dirname(__FILE__, 2)),
-            array( 'wp-blocks', 'wp-element')
+            ['wp-blocks', 'wp-element']
         );
         wp_register_script(
             'v8ch/block-v8ch-projects',
             plugins_url('/dist/scripts/block-v8ch-projects.js', dirname(__FILE__, 2)),
-            array( 'wp-blocks', 'wp-element')
+            ['wp-blocks', 'wp-element']
         );
         wp_register_script(
             'v8ch/block-v8ch-skills',
             plugins_url('/dist/scripts/block-v8ch-skills.js', dirname(__FILE__, 2)),
-            array( 'wp-blocks', 'wp-element')
+            ['wp-blocks', 'wp-element']
         );
         wp_register_style(
             'v8ch/tractor-blocks',
             plugins_url('/dist/styles/tractor-blocks.css', dirname(__FILE__, 2)),
-            array( 'wp-edit-blocks' )
+            ['wp-edit-blocks']
         );
     }
 }
