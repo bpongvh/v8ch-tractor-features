@@ -33,7 +33,7 @@ class RegisterAssets
             ['wp-blocks', 'wp-element']
         );
         wp_register_style(
-            'v8ch/tractor-blocks',
+            'v8ch-tractor-blocks',
             plugins_url('/dist/styles/tractor-blocks.css', dirname(__FILE__, 2)),
             ['wp-edit-blocks']
         );
