@@ -138,7 +138,7 @@
 }
 
 .frame__form-container {
-  @extend %flex-container-base;
+  display: flex;
 
   & form {
     width: 100%;
