@@ -1,13 +1,15 @@
 {
   "env": {
-    "node": true,
-    "es6": true,
     "amd": true,
     "browser": true,
+    "node": true,
+    "es6": true,
+    "jest/globals": true,
     "jquery": true
   },
   "extends": [
     "airbnb",
+    "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended"
   ],
   "globals": {
@@ -23,7 +25,7 @@
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
-  "plugins": ["import"],
+  "plugins": ["import", "jest"],
   "root": true,
   "rules": {
     "linebreak-style": "off",
