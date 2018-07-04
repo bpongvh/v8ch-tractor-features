@@ -18,6 +18,11 @@ class RegisterAssets
     public function register()
     {
         wp_register_script(
+            'v8ch/block-v8ch-contact',
+            plugins_url('/dist/scripts/block-v8ch-contact.js', dirname(__FILE__, 2)),
+            ['wp-blocks', 'wp-element']
+        );
+        wp_register_script(
             'v8ch/block-v8ch-hero',
             plugins_url('/dist/scripts/block-v8ch-hero.js', dirname(__FILE__, 2)),
             ['wp-blocks', 'wp-element']

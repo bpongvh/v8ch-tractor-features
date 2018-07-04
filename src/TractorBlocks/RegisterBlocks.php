@@ -18,6 +18,14 @@ class RegisterBlocks
     public function register()
     {
         register_block_type(
+            'v8ch/v8ch-contact',
+            [
+                'editor_script'   => 'v8ch/block-v8ch-contact',
+                'editor_style'    => 'v8ch-tractor-blocks',
+                'render_callback'    => [$this, 'renderV8chContact'],
+            ]
+        );
+        register_block_type(
             'v8ch/v8ch-hero',
             [
                 'editor_script'   => 'v8ch/block-v8ch-hero',
@@ -41,6 +49,11 @@ class RegisterBlocks
                 'render_callback'    => [$this, 'renderV8chSkills'],
             ]
         );
+    }
+
+    public function renderV8chContact()
+    {
+        return '<div id="v8ch-contact-mount"></div>';
     }
 
     public function renderV8chHero()

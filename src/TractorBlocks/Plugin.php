@@ -14,22 +14,31 @@ if (!defined('ABSPATH')) {
 
 class Plugin
 {
+
+    public $apps;
+    public $assets;
+    public $blocks;
+
+    public function __construct()
+    {
+        $this->apps = new RegisterRenderApps();
+        $this->assets = new RegisterAssets();
+        $this->blocks = new RegisterBlocks();
+    }
+
     public function registerAssets()
     {
-        $assets = new RegisterAssets();
-        add_action('plugins_loaded', [$assets, 'register'], 100);
+        add_action('plugins_loaded', [$this->assets, 'register'], 100);
     }
 
     public function registerBlocks()
     {
-        $blocks = new RegisterBlocks();
-        add_action('plugins_loaded', [$blocks, 'register'], 100);
+        add_action('plugins_loaded', [$this->blocks, 'register'], 100);
     }
 
     public function registerApps()
     {
-        $apps = new RegisterRenderApps();
-        add_action('plugins_loaded', [$apps, 'enqueue'], 100);
+        add_action('plugins_loaded', [$this->apps, 'register'], 100);
     }
 
     public function run()

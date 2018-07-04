@@ -15,9 +15,10 @@ if (!defined('ABSPATH')) {
 class RegisterRenderApps
 {
 
-    public function enqueue()
+    public function register()
     {
         $this->registerStyle();
+        $this->registerV8chContactApp();
         $this->registerV8chHeroApp();
         $this->registerV8chProjectsApp();
         $this->registerV8chSkillsApp();
@@ -29,6 +30,17 @@ class RegisterRenderApps
             'v8ch-tractor-blocks',
             plugins_url('/dist/styles/tractor-blocks.css', dirname(__FILE__, 2)),
             ['wp-blocks', 'wp-element']
+        );
+    }
+
+    public function registerV8chContactApp()
+    {
+        wp_register_script(
+            'v8ch_contact_app',
+            plugins_url('/dist/scripts/app-v8ch-contact.js', dirname(__FILE__, 2)),
+            ['wp-element'],
+            false,
+            true
         );
     }
 
