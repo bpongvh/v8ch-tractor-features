@@ -4,12 +4,42 @@ import ProjectsList from '../components/ProjectsList';
 const { registerBlockType } = wp.blocks;
 const { __ } = wp.i18n;
 
-const editFn = () => (
-  [
-    <ProjectsList key="editor" />,
-  ]
-);
+const editFn = () => {
+  // const projects = [
+  //   {
+  //     description: 'Code Repositories',
+  //     linkText: 'V8CH at GitHub',
+  //     href: 'https://github.com/V8CH',
+  //   },
+  //   {
+  //     description: 'SAAS platform for managing documentation of field training for new police officers',
+  //     linkText: 'Departmentware',
+  //     href: 'https://www.departmentware.com',
+  //   },
+  //   {
+  //     description: 'Team organization architecture built with Laravel, React and VueJS (demo on request)',
+  //     linkText: 'Combine',
+  //     href: 'https://combine.team/',
+  //   },
+  //   {
+  //     description: 'Custom WordPress theme',
+  //     linkText: 'jeromegoldschmidt.com',
+  //     href: 'http://www.jeromegoldschmidt.com',
+  //   },
+  //   {
+  //     description: 'Custom WordPress theme',
+  //     linkText: 'bakerbrospr.com',
+  //     href: 'http://www.bakerbrospr.com',
+  //   },
+  // ];
+  return (
+    [
+      <ProjectsList key="editor" />,
+    ]
+  );
+};
 
+/* eslint-disable */
 const saveFn = () => null;
 
 /**
@@ -21,6 +51,12 @@ const saveFn = () => null;
  * @return {?WPBlock}
  */
 registerBlockType('v8ch/v8ch-projects', {
+  attributes: {
+    projects: {
+      meta: 'v8ch-tractor-blocks-projects',
+      type: 'string',
+    },
+  },
   category: 'common',
   icon: 'editor-ul',
   keywords: [__('projects'), __('V8CH')],
