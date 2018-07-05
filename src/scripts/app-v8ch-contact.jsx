@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Contact from './components/Contact';
+import ContactFooter from './components/ContactFooter';
 
 ReactDOM.render(
-  <Contact />,
+  <ContactFooter />,
   document.getElementById('v8ch-contact-mount'),
 );

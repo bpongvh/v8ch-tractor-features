@@ -4,6 +4,32 @@
 @import 'bootstrap/bootstrap';
 
 svg {
+  & .fill-color--github-logo {
+    fill: #181616;
+  }
+
+  & .fill-color--twitter-logo {
+    fill: #1da1f2;
+  }
+
+  & .fill-color--v8ch-logo {
+    fill: $color__v8ch-green;
+  }
+
+  & .fill-color--v8ch-logo-dark {
+    fill: $color__v8ch-dark-green;
+  }
+
+  &#github-logo {
+    height: 30px;
+    width: 30px;
+  }
+
+  &#twitter-logo {
+    height: 30px;
+    width: 30px;
+  }
+
   &#v8ch-logo {
     height: 150px;
     width: 150px;
@@ -14,11 +40,17 @@ svg {
     }
   }
 
-  & .fill-color--v8ch-logo {
-    fill: #dcedc8;
+  &#v8ch-logotype {
+    height: 32px;
+    width: 85px;
   }
 
   .editor-block-list__layout & {
+    &#github-logo {
+      height: 30px;
+      width: 30px;
+    }
+
     &#v8ch-logo {
       height: 125px;
       width: 125px;
@@ -27,6 +59,11 @@ svg {
         height: 200px;
         width: 200px;
       }
+    }
+
+    &#v8ch-logotype {
+      height: 32px;
+      width: 85px;
     }
   }
 }

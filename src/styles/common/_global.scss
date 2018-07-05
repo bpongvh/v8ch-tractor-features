@@ -159,6 +159,12 @@
   }
 }
 
+.social-icons {
+  & > :not(:last-child) {
+    padding: 0 1em 0 0;
+  }
+}
+
 .split-header {
   display: flex;
   justify-content: space-between;

@@ -4,7 +4,7 @@ import ProjectsList from '../components/ProjectsList';
 const { registerBlockType } = wp.blocks;
 const { __ } = wp.i18n;
 
-const editFn = () => {
+const editFn = () => { /* eslint-disable-line arrow-body-style */
   // const projects = [
   //   {
   //     description: 'Code Repositories',
@@ -12,11 +12,13 @@ const editFn = () => {
   //     href: 'https://github.com/V8CH',
   //   },
   //   {
+  /* eslint-disable-next-line max-len */
   //     description: 'SAAS platform for managing documentation of field training for new police officers',
   //     linkText: 'Departmentware',
   //     href: 'https://www.departmentware.com',
   //   },
   //   {
+  /* eslint-disable-next-line max-len */
   //     description: 'Team organization architecture built with Laravel, React and VueJS (demo on request)',
   //     linkText: 'Combine',
   //     href: 'https://combine.team/',

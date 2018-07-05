@@ -1,12 +1,12 @@
 import React from 'react';
-import Contact from '../components/Contact';
+import ContactFooter from '../components/ContactFooter';
 
 const { registerBlockType } = wp.blocks;
 const { __ } = wp.i18n;
 
 const editFn = () => (
   [
-    <Contact key="editor" />,
+    <ContactFooter key="editor" />,
   ]
 );
 
