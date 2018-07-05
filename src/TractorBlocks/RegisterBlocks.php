@@ -53,7 +53,7 @@ class RegisterBlocks
 
     public function renderV8chContact()
     {
-        return '<div id="v8ch-contact-mount"></div>';
+        return "          <div id=\"v8ch-contact-mount\"></div>\n";
     }
 
     public function renderV8chHero()
@@ -61,13 +61,23 @@ class RegisterBlocks
         return '<div id="v8ch-hero-mount"></div>';
     }
 
-    public function renderV8chProjects()
+    public function renderV8chProjects($attributes)
     {
-        return '<div id="v8ch-projects-mount"></div>';
+        ob_start();
+        ?>
+          <div
+            data-projects='<?php echo $attributes['projects'] ?>'
+            id="v8ch-projects-mount"
+          ></div>
+        <?php
+        $html = ob_get_clean();
+        ob_flush();
+
+        return $html;
     }
 
     public function renderV8chSkills()
     {
-        return '<div id="v8ch-skills-mount"></div>';
+        return '          <div id="v8ch-skills-mount"></div>';
     }
 }
