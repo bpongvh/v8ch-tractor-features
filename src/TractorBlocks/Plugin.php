@@ -26,6 +26,11 @@ class Plugin
         $this->blocks = new RegisterBlocks();
     }
 
+    public function registerApps()
+    {
+        add_action('plugins_loaded', [$this->apps, 'register'], 100);
+    }
+
     public function registerAssets()
     {
         add_action('plugins_loaded', [$this->assets, 'register'], 100);
@@ -34,11 +39,6 @@ class Plugin
     public function registerBlocks()
     {
         add_action('plugins_loaded', [$this->blocks, 'register'], 100);
-    }
-
-    public function registerApps()
-    {
-        add_action('plugins_loaded', [$this->apps, 'register'], 100);
     }
 
     public function run()
