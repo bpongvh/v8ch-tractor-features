@@ -29,7 +29,8 @@
   "root": true,
   "rules": {
     "linebreak-style": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/forbid-prop-types": "off"
   },
   "settings": {
     "import/core-modules": [],
