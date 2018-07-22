@@ -1,9 +1,8 @@
 import path from 'path';
 import merge from 'webpack-merge';
 import { argv } from 'yargs';
-import desire from './util/desire';
 
-const userConfig = merge(desire(`${__dirname}/../config`), desire(`${__dirname}/../config-local`));
+const userConfig = require(`${__dirname}/../config`);
 
 const isProduction = !!((argv.env && argv.env.production) || argv.p);
 const rootPath = (userConfig.paths && userConfig.paths.root)
@@ -11,23 +10,21 @@ const rootPath = (userConfig.paths && userConfig.paths.root)
   : process.cwd();
 
 const config = merge({
-  // proxyUrl: 'http://localhost:3000',
-  paths: {
-    root: rootPath,
-    src: path.join(rootPath, 'src'),
-    dist: path.join(rootPath, 'dist'),
-  },
   enabled: {
-    styleLoader: !isProduction,
+    browserSync: !!argv.hot,
+    styleLoader:  !!argv.hot,
     sourceMaps: !isProduction,
-    watcher: !!argv.watch,
+  },
+  paths: {
+    assets: path.join(rootPath, 'src'),
+    root: rootPath,
+    dist: path.join(rootPath, 'dist'),
   },
   watch: [],
 }, userConfig);
 
-module.exports = merge(config, {
+export default merge(config, {
   env: Object.assign({ production: isProduction, development: !isProduction }, argv.env),
-  publicPath: `${config.publicPath}/${path.basename(config.paths.dist)}/`,
   manifest: {},
 });
 

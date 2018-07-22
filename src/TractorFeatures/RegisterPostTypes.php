@@ -2,10 +2,10 @@
 /**
  *
  * @since   1.0.0
- * @package v8ch-tractor-blocks
+ * @package v8ch-tractor-features
  */
 
-namespace V8CH\WordPress\TractorBlocks;
+namespace V8CH\WordPress\TractorFeatures;
 
 // Exit if accessed directly.
 if (!defined('ABSPATH')) {

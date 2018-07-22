@@ -5,7 +5,7 @@
  * @package v8ch-tractor-features
  */
 
-namespace V8CH\WordPress\TractorBlocks;
+namespace V8CH\WordPress\TractorFeatures;
 
 // Exit if accessed directly.
 if (!defined('ABSPATH')) {
@@ -19,12 +19,12 @@ class RegisterAssets
     {
         wp_register_script(
             'v8ch/block-featured-link',
-            plugins_url('/dist/scripts/block-featured-link.js', dirname(__FILE__, 2)),
+            plugins_url('/dist/js/block-featured-link.js', dirname(__FILE__, 2)),
             ['wp-blocks', 'wp-element']
         );
         wp_register_style(
             'v8ch-tractor-features',
-            plugins_url('/dist/styles/tractor-features.css', dirname(__FILE__, 2)),
+            plugins_url('/dist/css/tractor-features.css', dirname(__FILE__, 2)),
             ['wp-edit-blocks']
         );
         // wp_register_script(

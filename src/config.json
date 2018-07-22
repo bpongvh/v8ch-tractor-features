@@ -1,15 +1,19 @@
 {
-  "entry": {
-    "block-featured-link": ["./scripts/blocks/featured-link.jsx"],
-    "tractor-features": ["./styles/tractor-features.scss"]
-  },
-  "devUrl": "http://v8ch_com.local",
-  "proxyUrl": "http://localhost:3001",
   "cacheBusting": "[name]_[hash:8]",
+  "externals": {
+    "react": "React",
+    "react-dom": "ReactDOM",
+    "wp": "wp"
+  },
+  "entry": {
+    "block-featured-link": ["./src/scripts/blocks/featured-link.jsx"],
+    "tractor-features": ["./src/styles/tractor-features.scss"]
+  },
+  "proxyContext": ["/"],
+  "proxyTarget": "http://v8ch_com.local",
+  "proxyUrl": "http://localhost:3000",
   "watch": [
-    "dist/**/*.css",
-    "dist/**/*.js",
-    "init.php",
-    "v8ch-tractor-blocks.php"
+    "src/TractorFeatures/**/*.php",
+    "v8ch-tractor-features.php"
   ]
 }
