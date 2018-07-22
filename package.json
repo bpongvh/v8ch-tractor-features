@@ -48,6 +48,7 @@
     "@wordpress/i18n": "1.1.0",
     "browser-sync": "^2.24.6",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "eslint-plugin-jest": "^21.18.0",
     "fork-ts-checker-webpack-plugin": "^0.4.3",
     "jquery": "^3.3.1",
     "popper.js": "1.14.3",
@@ -138,5 +139,7 @@
     "build-dev": "webpack --config src/build/webpack.config.babel.js --mode development --progress --watch",
     "start": "webpack-dev-server --config src/build/webpack.config.babel.js --hot --mode development --progress"
   },
-  "stylelint": {"extends": "stylelint-config-recommended-scss"}
+  "stylelint": {
+    "extends": "stylelint-config-recommended-scss"
+  }
 }
