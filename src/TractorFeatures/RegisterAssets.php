@@ -22,6 +22,11 @@ class RegisterAssets
             plugins_url('/dist/js/block-featured-link.js', dirname(__FILE__, 2)),
             ['wp-blocks', 'wp-element']
         );
+        wp_enqueue_style(
+            'v8ch-tractor-google-fonts',
+            'https://fonts.googleapis.com/css?family=Work+Sans:300,400,600',
+            false
+        );
         wp_register_style(
             'v8ch-tractor-features',
             plugins_url('/dist/css/tractor-features.css', dirname(__FILE__, 2)),
