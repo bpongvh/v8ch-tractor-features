@@ -16,6 +16,7 @@ let configBuilder = {
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
+    wp: 'wp',
   },
   module: {
     rules: [

@@ -5,6 +5,7 @@
     "url": "https://github.com/bpongvh"
   },
   "dependencies": {
+    "@wordpress/i18n": "1.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -38,7 +39,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.10.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "gutenberg": "WordPress/gutenberg#master",
     "jest": "^23.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.7.2",
