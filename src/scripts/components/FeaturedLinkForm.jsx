@@ -21,25 +21,29 @@ class FeaturedLinkForm extends Component {
 
     /* eslint-disable react/destructuring-assignment */
     return !isSelected ? (
-      <div>
-        <a href={href}>
-          {linkText || __(this.state.placeholders.linkText)}
-        </a>
-        <p>
-          {description || __(this.state.placeholders.description)}
-        </p>
+      <div className="frame frame--dark-background type--v8ch">
+        <div className="featured-link featured-link--light">
+          <h5>
+            <a href={href}>
+              {linkText || __(this.state.placeholders.linkText)}
+            </a>
+          </h5>
+          <p>
+            {description || __(this.state.placeholders.description)}
+          </p>
+        </div>
       </div>
     ) : (
       <Fragment>
-        <div className="frame frame--light-background">
+        <div className="frame frame--dark-background type--v8ch">
           <div className="frame__form-container">
             <form noValidate>
               <div className="form-group">
-                <label htmlFor="linkText">
+                <label className="v8ch-green" htmlFor="linkText">
                   Link text
                   <input
-                    className="form-control"
-                    name="linkText"
+                    className="form-control form-control--reverse"
+                    id="linkText"
                     onChange={value => onSetAttribute({ linkText: value })}
                     placeholder={this.state.placeholders.linkText}
                     value={linkText}
@@ -47,11 +51,11 @@ class FeaturedLinkForm extends Component {
                 </label>
               </div>
               <div className="form-group">
-                <label htmlFor="href">
+                <label className="v8ch-green" htmlFor="href">
                   Link URL
                   <input
-                    className="form-control"
-                    name="href"
+                    className="form-control form-control--reverse"
+                    id="href"
                     onChange={value => onSetAttribute({ href: value })}
                     placeholder={this.state.placeholders.href}
                     value={href}
@@ -59,13 +63,15 @@ class FeaturedLinkForm extends Component {
                 </label>
               </div>
               <div className="form-group">
-                <label htmlFor="description">
+                {/* eslint-disable-next-line jsx-a11y/label-has-for */}
+                <label className="v8ch-green" htmlFor="description">
                   Description
-                  <input
-                    className="form-control"
-                    name="description"
+                  <textarea
+                    className="form-control form-control--reverse"
+                    id="description"
                     onChange={value => onSetAttribute({ description: value })}
                     placeholder={this.state.placeholders.description}
+                    rows={5}
                     value={description}
                   />
                 </label>

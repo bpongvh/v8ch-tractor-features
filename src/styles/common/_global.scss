@@ -21,10 +21,6 @@
 
   @media (min-width: 768px) {
     padding: 2em;
-
-    .editor-block-list__layout & {
-      padding: 1em;
-    }
   }
 }
 
@@ -147,14 +143,9 @@
   @media (min-width: 768px) {
     padding: 0 25% 2em;
 
+    .editor-block-list__block-edit &,
     .editor-block-list__layout & {
       padding: 0;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .editor-block-list__layout & {
-      padding: 0 25% 2em;
     }
   }
 }
@@ -173,4 +164,12 @@
 
 .split-header--light {
   color: $color__v8ch-green !important;
+}
+
+.v8ch-green {
+  color: $color__v8ch-green;
+}
+
+.v8ch-dark-green {
+  color: $color__v8ch-dark-green;
 }

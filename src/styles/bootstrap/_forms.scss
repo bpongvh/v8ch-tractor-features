@@ -1,5 +1,3 @@
-// stylelint-disable selector-no-qualifying-type
-
 //
 // Textual form controls
 //
@@ -44,6 +42,17 @@
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
+  
+  &.form-control--reverse {
+    background-color: $input-bg-reverse;
+    border: 0;
+    border-bottom: $input-border-width solid $input-border-color-reverse;
+    border-radius: 0;
+    padding: $input-padding-y $input-padding-x-reverse;
+    &::placeholder {
+      color: $input-placeholder-color-reverse;
+    }
+  }
 
   // Disabled and read-only inputs
   //
@@ -72,6 +81,11 @@ select.form-control {
   &:not([size]):not([multiple]) {
     height: $input-height;
   }
+}
+
+textarea.form-control {
+  // Override WordPress editor styles
+  font-size: 1rem;
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
