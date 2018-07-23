@@ -5,10 +5,16 @@ import FeaturedLinkForm from '../components/FeaturedLinkForm';
 const { registerBlockType } = wp.blocks;
 
 const editFn = (props) => {
-  const { attributes, isSelected, setAttributes } = props;
-  const { description, href, linkText } = attributes;
+  const {
+    attributes,
+    isSelected,
+    setAttributes,
+  } = props;
+  const { description, href } = attributes;
 
-  const onSetAttribute = attribute => (setAttributes(attribute));
+  const onSetAttribute = (attribute) => {
+    setAttributes(attribute);
+  };
 
   return (
     [
@@ -17,14 +23,13 @@ const editFn = (props) => {
         href={href}
         isSelected={isSelected}
         key="editor"
-        linkText={linkText}
         onSetAttribute={value => onSetAttribute(value)}
       />,
     ]
   );
 };
 
-const saveFn = () => null;
+const saveFn = () => (null);
 
 /**
  * Register the block
@@ -42,13 +47,9 @@ registerBlockType('v8ch/featured-link', {
       meta: 'v8ch-featured-link-href',
       type: 'string',
     },
-    linkText: {
-      meta: 'v8ch-featured-link-link-text',
-      type: 'string',
-    },
   },
   category: 'common',
-  icon: 'category',
+  icon: 'admin-links',
   keywords: [__('featured'), __('link')],
   title: __('Featured Link'),
 
