@@ -1,0 +1,12 @@
+{
+	"collectCoverageFrom": [
+		"src/**/*.js?(x)",
+		"!**/node_modules/**",
+		"!**/__test__/**"
+	],
+	"moduleDirectories": ["node_modules"],
+	"setupFiles": ["./src/scripts/tests/setup/globals"],
+	"testMatch": ["**/__tests__/**/?(*.)+(spec|test).js?(x)"],
+	"testPathIgnorePatterns": ["/node_modules/"],
+	"transformIgnorePatterns": ["node_modules/(?!(gutenberg)/)"]
+}

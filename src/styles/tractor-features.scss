@@ -1,0 +1,69 @@
+@import "common/global";
+@import "common/typography";
+@import "common/variables";
+@import 'bootstrap/bootstrap';
+
+svg {
+  & .fill-color--github-logo {
+    fill: #181616;
+  }
+
+  & .fill-color--twitter-logo {
+    fill: #1da1f2;
+  }
+
+  & .fill-color--v8ch-logo {
+    fill: $color__v8ch-green;
+  }
+
+  & .fill-color--v8ch-logo-dark {
+    fill: $color__v8ch-dark-green;
+  }
+
+  &#github-logo {
+    height: 30px;
+    width: 30px;
+  }
+
+  &#twitter-logo {
+    height: 30px;
+    width: 30px;
+  }
+
+  &#v8ch-logo {
+    height: 150px;
+    width: 150px;
+
+    @media (min-width: 768px) {
+      height: 350px;
+      width: 350px;
+    }
+  }
+
+  &#v8ch-logotype {
+    height: 32px;
+    width: 85px;
+  }
+
+  .editor-block-list__layout & {
+    &#github-logo {
+      height: 30px;
+      width: 30px;
+    }
+
+    &#v8ch-logo {
+      height: 125px;
+      width: 125px;
+
+      @media (min-width: 768px) {
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    &#v8ch-logotype {
+      height: 32px;
+      width: 85px;
+    }
+  }
+}
