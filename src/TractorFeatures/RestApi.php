@@ -22,7 +22,7 @@ class RestApi
             if (gutenberg_can_edit_post_type($post_type)) {
                 register_rest_field(
                     $post_type,
-                    'blocks',
+                    'data',
                     [
                         'get_callback' => [$this, 'getBlockData'],
                     ]
@@ -38,8 +38,8 @@ class RestApi
             $blocks,
             function ($carry, $block) {
                 switch ($block['blockName']) {
-                    case 'v8ch/v8ch-projects':
-                        $formatted = $this->formatV8chProjects($block);
+                    case 'v8ch/featured-link':
+                        $formatted = $this->formatFeaturedLink($block);
                         array_push($carry, $formatted);
                         return $carry;
                     default:
@@ -52,13 +52,11 @@ class RestApi
         return $processed;
     }
 
-    public function formatV8chProjects($block)
+    public function formatFeaturedLink($block)
     {
         return [
-            'blockName' => $block['blockName'],
-            'attrs' => [
-                'projects' => json_decode($block['attrs']['projects']),
-            ],
+            'description' => $block['attrs']['description'],
+            'href' => $block['attrs']['href'],
         ];
     }
 }
