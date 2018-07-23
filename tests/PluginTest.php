@@ -1,14 +1,14 @@
 <?php
 /**
- * Class SampleTest
+ * Class PluginTest
  *
- * @package V8ch_Tractor_Blocks
+ * @package v8ch-tractor-features
  */
 
-namespace V8CH\WordPress\TractorBlocks\Tests;
+namespace V8CH\WordPress\TractorFeatures\Tests;
 
-use V8CH\WordPress\TractorBlocks\Plugin;
-use V8CH\WordPress\TractorBlocks\RegisterAssets;
+use V8CH\WordPress\TractorFeatures\Plugin;
+use V8CH\WordPress\TractorFeatures\RegisterAssets;
 use WP_Mock;
 use WP_Mock\Tools\TestCase;
 

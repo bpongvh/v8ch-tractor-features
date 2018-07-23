@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package tests
+ * @package v8ch-tractor-features
  */
 
 require_once dirname(__FILE__, 2) . '/vendor/autoload.php';
