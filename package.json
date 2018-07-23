@@ -35,6 +35,12 @@
         }
       ],
       [
+        "transform-react-jsx",
+        {
+          "pragma": "createElement"
+        }
+      ],
+      [
         "transform-runtime",
         {
           "helpers": false,
@@ -45,6 +51,8 @@
     ]
   },
   "dependencies": {
+    "@wordpress/components": "^1.0.1",
+    "@wordpress/data": "^1.0.1",
     "@wordpress/i18n": "1.1.0",
     "browser-sync": "^2.24.6",
     "browser-sync-webpack-plugin": "^2.2.2",
