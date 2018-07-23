@@ -1,6 +1,10 @@
 import { __ } from '@wordpress/i18n';
+import { TextControl, TextareaControl } from '@wordpress/components';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
+import { updateValue } from '../store/utils/subscription';
+
+const { subscribe, withSelect } = wp.data;
 
 class FeaturedLinkForm extends Component {
   constructor(props) {
@@ -35,57 +39,34 @@ class FeaturedLinkForm extends Component {
       </div>
     ) : (
       <Fragment>
-        <div className="frame frame--dark-background type--v8ch">
-          <div className="frame__form-container">
-            <form noValidate>
-              <div className="form-group">
-                <label className="v8ch-green" htmlFor="linkText">
-                  Link text
-                  <input
-                    className="form-control form-control--reverse"
-                    id="linkText"
-                    onChange={value => onSetAttribute({ linkText: value })}
-                    placeholder={this.state.placeholders.linkText}
-                    value={linkText}
-                  />
-                </label>
-              </div>
-              <div className="form-group">
-                <label className="v8ch-green" htmlFor="href">
-                  Link URL
-                  <input
-                    className="form-control form-control--reverse"
-                    id="href"
-                    onChange={value => onSetAttribute({ href: value })}
-                    placeholder={this.state.placeholders.href}
-                    value={href}
-                  />
-                </label>
-              </div>
-              <div className="form-group">
-                {/* eslint-disable-next-line jsx-a11y/label-has-for */}
-                <label className="v8ch-green" htmlFor="description">
-                  Description
-                  <textarea
-                    className="form-control form-control--reverse"
-                    id="description"
-                    onChange={value => onSetAttribute({ description: value })}
-                    placeholder={this.state.placeholders.description}
-                    rows={5}
-                    value={description}
-                  />
-                </label>
-              </div>
-            </form>
-          </div>
-        </div>
+        <TextControl
+          label={__('Link URL')}
+          onChange={value => onSetAttribute({ href: value })}
+          rows={5}
+          value={href}
+        />
+        <TextareaControl
+          label={__('Link description')}
+          onChange={value => onSetAttribute({ description: value })}
+          value={description}
+        />
       </Fragment>
     );
     /* eslint-enable react/destructuring-assignment */
   }
 }
 
-export default FeaturedLinkForm;
+export default withSelect((select) => {
+  const { getEditedPostAttribute } = select('core/editor');
+  let linkText = getEditedPostAttribute('title');
+  subscribe(() => {
+    linkText = updateValue(
+      linkText,
+      getEditedPostAttribute('title'),
+    );
+  });
+  return { linkText };
+})(FeaturedLinkForm);
 
 FeaturedLinkForm.propTypes = {
   description: PropTypes.string,
