@@ -31,11 +31,6 @@ class Plugin
         $this->taxonomies = new RegisterTaxonomies();
     }
 
-    // public function registerApps()
-    // {
-    //     add_action('plugins_loaded', [$this->apps, 'register']);
-    // }
-
     public function registerAssets()
     {
         add_action('plugins_loaded', [$this->assets, 'register']);
@@ -63,7 +58,6 @@ class Plugin
 
     public function run()
     {
-        // $this->registerApps();
         $this->registerAssets();
         $this->registerBlocks();
         $this->registerPostTypes();
