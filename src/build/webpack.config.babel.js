@@ -9,7 +9,7 @@ import VueLoaderPlugin from 'vue-loader/lib/plugin';
 import webpack from 'webpack';
 import config from './config';
 
-let configBuilder = {
+const configBuilder = {
   context: process.cwd(),
   devServer: {
     contentBase: config.paths.dist,
@@ -28,8 +28,8 @@ let configBuilder = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           'file-loader?name=images/[name].[ext]',
-          'image-webpack-loader?bypassOnDebug'
-        ]
+          'image-webpack-loader?bypassOnDebug',
+        ],
       },
       {
         test: /\.jsx?$/,
@@ -38,7 +38,7 @@ let configBuilder = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-plain-loader'
+        loader: 'pug-plain-loader',
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -60,12 +60,12 @@ let configBuilder = {
         use: [
           { loader: 'cache-loader' },
           {
-              loader: 'thread-loader',
-              options: {
-                  workers: require('os').cpus().length - 1,
-              },
+            loader: 'thread-loader',
+            options: {
+              workers: require('os').cpus().length - 1,
+            },
           },
-          {            
+          {
             loader: 'ts-loader',
             options: {
               appendTsSuffixTo: [/\.vue$/],
@@ -89,12 +89,12 @@ let configBuilder = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [
-          {            
+          {
             loader: 'url-loader',
             options: {
               fallback: 'file-loader',
@@ -156,10 +156,10 @@ if (config.enabled.browserSync) {
     new BrowserSyncPlugin(
       {
         files: config.watch,
-        proxy: 'http://localhost:8080/'
+        proxy: 'http://localhost:8080/',
       },
       { injectCss: true },
-    )
+    ),
   );
 }
 
