@@ -58,7 +58,7 @@ class RegisterAssetsTest extends TestCase
         WP_Mock::userFunction(
             'plugins_url',
             [
-                'args'  => ['/dist/styles/tractor-blocks.css', '*'],
+                'args'  => ['/dist/styles/tractor-features.css', '*'],
                 'times' => 1,
             ]
         );
@@ -113,7 +113,7 @@ class RegisterAssetsTest extends TestCase
             'wp_register_style',
             [
                 'args'  => [
-                    'v8ch-tractor-blocks',
+                    'v8ch-tractor-features',
                     '*',
                     ['wp-edit-blocks']
                 ],
